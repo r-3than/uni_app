@@ -28,18 +28,12 @@ class _HomePage extends State<HomePage> {
               return Scaffold(
                 // Create your layout here
                 body: Column(children: [
-                  ListView.builder(
-                    itemCount: state.Unis.length,
-                    prototypeItem: ListTile(
-                      title: Text(state.Unis.first),
-                    ),
-                    itemBuilder: (context, index) {
-                      return ListTile(
-                        title: Text(state.Unis[index]),
-                      );
-                    },
+                  //ListView.builder(itemBuilder: itemBuilder)
+                  Spacer(),
+                  TextFormField(
+                    decoration:
+                        new InputDecoration.collapsed(hintText: 'Name of Uni'),
                   ),
-                  TextFormField(),
                   DropdownMenuExample(
                     list: state.countries,
                   )
